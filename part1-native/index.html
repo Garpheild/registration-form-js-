@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Авторизация</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Добро пожаловать</h1>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Вход</h2>
+
+      <div class="socials">
+        <button type="button" class="btn btn-google">Google</button>
+        <button type="button" class="btn btn-vk">VK</button>
+        <button type="button" class="btn btn-github">GitHub</button>
+      </div>
+
+      <p class="divider">или</p>
+
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="login">Логин</label>
+          <input type="text" id="login" class="input" placeholder="email или телефон" required>
+          <span id="login-error" class="error"></span>
+        </div>
+
+        <div class="field">
+          <label for="password">Пароль</label>
+          <input type="password" id="password" class="input" placeholder="минимум 6 символов" required minlength="6">
+          <span id="password-error" class="error"></span>
+        </div>
+
+        <label>
+          <input type="checkbox" id="rememberMe"> Сохранять сессию
+        </label>
+
+        <button type="submit" id="submitBtn">Войти</button>
+      </form>
+
+      <div id="success" hidden>
+        <p class="success-text">Вы вошли!</p>
+        <p>Логин: <strong id="displayLogin"></strong></p>
+        <button type="button" id="logoutBtn">Выйти</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Nikita Markov - 2026</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
